@@ -1,2 +1,3 @@
-# Stats-with-Python
-Statistics with Python
+# Maths-with-Python
+1. Statistics with Python
+2. Numerical methods
