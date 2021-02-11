@@ -43,6 +43,8 @@ def plot(*coords):
     plt.show()
 
 def area(*coords):
+    '''Calculates the area of polygon based on given vertices/coordinates 
+       using Shoelace Theorem'''
     A = np.array(coords)
 
     # Extract x and y coordinates from coords
