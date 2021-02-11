@@ -42,4 +42,23 @@ def plot(*coords):
 
     plt.show()
 
-plot([0,0],[2,3],[1,5])
+def area(*coords):
+    A = np.array(coords)
+
+    # Extract x and y coordinates from coords
+    x = A[:, 0]
+    y = A[:, 1]
+
+    #Using the shoelace formula
+    S1 = np.sum(x*np.roll(y,-1))
+    S2 = np.sum(y*np.roll(x,-1))
+
+    return 0.5*np.absolute(S1-S2)
+
+c1 = [1,3]
+c2 = [3,10]
+c3 = [-1,5]
+c4 = [0,4]
+c5 = [-3,-4]
+print("Area = ",area(c1,c2,c3,c4,c5))
+plot(c1,c2,c3,c4,c5)
